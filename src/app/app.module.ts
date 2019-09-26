@@ -8,11 +8,18 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
+import 'froala-editor/js/plugins.pkgd.min.js';
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+  imports: [BrowserModule,
+    IonicModule.forRoot(),
+    AppRoutingModule,
+    FroalaEditorModule.forRoot(),
+    FroalaViewModule.forRoot()
+  ],
   providers: [
     StatusBar,
     SplashScreen,
@@ -20,4 +27,4 @@ import { AppRoutingModule } from './app-routing.module';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
